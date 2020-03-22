@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sally Student resume</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div id="application-root">
+
+    </div>
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin="anonymous">
+    </script>
+    <script type="text/babel">
+
+      const appRoot = document.querySelector('#application-root'); 
+      
+      function App(props) {
+      console.log(props)
+        return (
+        <div className="container">
+          <header> 
+      <h1> {props.name}</h1>
+      <h2> Resume </h2>
+    </header>
+    <main> 
+    <section> 
+      <header>
+        <h3>Contact Info</h3>
+      </header>
+      <address>
+      <a href="mailto:sallystudent@gmail.com?subject=Sally Student resume" target="_blank"><strong>{props.name}</strong></a><br />
+      Mobile phone: (626) 667-1764 <br />
+      <img src="https://i.pinimg.com/236x/9a/1c/88/9a1c88717a63c57215047fe5ac9bd55e--the-nightmare-sally-nightmare-before-christmas.jpg" className="Sally" alt="Sally Student" />
+      </address>
+        </section>
+    <section>
+      <header>
+        <h3>Education</h3>
+      </header>
+      <p>College:</p>
+      <ul>
+        <li>Nightmare College <em>2010-2011</em></li>
+        <li>Christmas University <em>2012-2013</em></li>
+        </ul>
+      </section>
+    <section>
+      <header>
+      <h3>Employment History</h3>
+      </header>
+      <p>Jack Cosmetologists</p>
+      <p><em>Senior Makeup Artist 2018-2019</em></p>
+      <ul>
+        <li>Applied makeup to celebrity guys and ghouls</li>
+        <li>Interfaced with clients of all ages</li>
+        </ul>
+      <p>Clown University</p>
+      <p><em>Makeup Apprentice 2014-2017</em></p>
+      <ul>
+        <li>Apprentice to senior artists</li>
+        <li>Gained experience applying makeup to aspiring clowns</li> 
+        </ul>
+      </section>
+    </main>
+    <footer>(c) 2019 {props.name}</footer>
+    </div>
+          );
+};
+ReactDOM.render(<App name='Sally Student'/>, appRoot);
+    </script>
+</body>
+</html>
